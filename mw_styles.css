@@ -1,5 +1,11 @@
 ﻿@charset "utf-8";
 
+/* Added since apple does not have century gothic by default. */
+@font-face {
+    font-family: CenturyGothicProvided;
+    src: url('CenturyGothic.ttf') format('truetype');
+}
+
 /* ^^^ Used to set the character encoding */
 /*
    New Perspectives on HTML5 and CSS3, 7th Edition
@@ -20,17 +26,19 @@ html {
 
 body {
     background-color: rgb(227, 210, 173);
-    /* Sets the font. Apply does not have Century Gothic so AppleGothic had to be used instead. */
-    font-family: 'Century Gothic', Futura, sans-serif;
+    /* Sets the font. CenturyGothicProvided is because apple does not have century gothic by default. */
+    font-family: 'Century Gothic', CenturyGothicProvided, sans-serif;
     /* "Apple Gothic", AppleGothic, */
 }
 
+/* For the footer within the body. */
 body footer {
     background-color: rgb(208, 184, 109);
     padding-top: 5px;
     padding-bottom: 5px;
 }
 
+/* The address styling. */
 address {
     font-style: normal;
     font-size: 0.9em;
@@ -78,7 +86,7 @@ article#tour_summary p {
 /* In the article with the id of summary with the firist paragraph and the first line. */
 article#tour_summary p:first-of-type::first-line {
     font-size: 1.2em;
-    text-decoration: small-caps;
+    font-variant: small-caps;
 }
 
 /* Aside Styles */
