@@ -84,7 +84,7 @@ article#tour_summary p {
 }
 
 /* In the article with the id of summary with the firist paragraph and the first line. */
-article#tour_summary p:first-of-type::first-line {
+article#tour_summary>p:first-of-type::first-line {
     font-size: 1.2em;
     font-variant: small-caps;
 }
